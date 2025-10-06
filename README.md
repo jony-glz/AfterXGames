@@ -1,5 +1,6 @@
 # Proyecto
 ## Personas encargadas
+-
 Bryan Hernandez Saldivar - 23130590
 Carlos Jonathan Montoya Gonzalez - 23130563
 ----------
