@@ -87,7 +87,7 @@ body {
 
 .navegacion-principal a {
   display: block;
-  text-align: center;
+  text-align: right;
   color: var(--text);
   text-decoration: none;
   font-size: 2rem;
@@ -162,9 +162,11 @@ body {
 .juegos {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  
+
 }
 
 .images img {
@@ -294,6 +296,74 @@ body {
   text-align: center;
   border: none;
 }
+ .images.boton-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  
+}
+.usuario-box {
+  margin-left: auto;
+  background-color:var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color:var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.usuario-box a {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.usuario-box a:hover {
+  text-decoration: underline;
+}
+.bienvenida-fixed {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.bienvenida-fixed a {
+  color:var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bienvenida-fixed a:hover {
+  text-decoration: underline;
+}
+
+
+.navegacion-principal span {
+    display: inline-block;
+    color: var(--text);
+    background-color: #5B21B6;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+
 
 @media (min-width: 480px) {
   .boton {

@@ -10,16 +10,41 @@
     <link rel="stylesheet" href="css/stylesspr.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="icon" href="img/log.png" type="image/png">
 
-    <title>AfterXGames</title>
+    <title>AfterXGames - Rama de bryan</title>
 </head>
 
 
 <body>
+
+<?php
+session_start();
+
+
+$usuario = '';
+if(isset($_SESSION['admin'])){
+    $usuario = $_SESSION['admin'];
+} elseif(isset($_SESSION['cliente'])){
+    $usuario = $_SESSION['cliente'];
+}
+?>
+
+<div class="bienvenida-fixed">
+    <?php if($usuario): ?>
+        👋 <?= htmlspecialchars($usuario); ?>
+        <a href="php/logout.php">Cerrar Sesión</a>
+    <?php else: ?>
+        <a href="loginw.php">Iniciar Sesión</a>
+    <?php endif; ?>
+</div>
+
     <header class="titulo">
         <h1>AfterXGames <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" fill="#4f008f">
@@ -38,9 +63,16 @@
         <nav class="navegacion-principal">
             <a href="#">Inicio</a>
             <a href="#">Quiénes Somos</a>
-            <a href="#">Catálogo</a>
+            <a href="afterxgames\catalogow.php">Catálogo</a>
             <a href="#">Contacto</a>
-            <a href="#">Registrarse</a>
+         <?php if(isset($_SESSION['admin'])): ?>
+            <a href="inventario.php">Inventario</a>
+        <?php elseif(isset($_SESSION['cliente'])): ?>
+            <a href="carrito.php">Carrito</a>
+        <?php else: ?>
+            
+
+    <?php endif; ?>
 
         </nav>
     </div>
@@ -63,9 +95,17 @@
             <section class="juegos">
                 <div class="images">
 
+
                     <img src="img/batman.jpg">
                     <h3>Batman Arkam city</h3>
                     <p>Batman: Arkham, acción y aventura en Gotham City.</p>
+
+                    <div class="boton-center">
+                        <input type="submit" class="boton w-100" value="Comprar" >
+
+                    </div>
+
+
 
                 </div>
                 <section class="juegos">
@@ -73,7 +113,12 @@
                         <img src="img/kratos.jpg">
                         <h3>God Of War</h3>
                         <p>Aventura épica de Kratos contra dioses y monstruos.</p>
-                        <p>Nueva rama de rayo</p>
+                    
+                    
+                        <div class="boton-center">
+                            <input type="submit" class="boton w-100" value="Comprar">
+
+                        </div>
 
                     </div>
 
@@ -83,6 +128,11 @@
                         <img src="img/fc26.jpeg">
                         <h3>EAsporst 26</h3>
                         <p>Futbol Competitivamente</p>
+
+                        <div class="boton-center">
+                            <input type="submit" class="boton w-100" value="Comprar">
+
+                        </div>
 
                     </div>
                 </section>
