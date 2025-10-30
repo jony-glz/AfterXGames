@@ -37,7 +37,7 @@
                     <p>Horror psicológico en su máxima expresión.</p>
                     <p class="precio">$399 MXN</p>
                     <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="2">
                         <input type="hidden" name="nombre" value="Silent Hill 3">
                         <input type="hidden" name="precio" value="399">
                         <button type="submit" class="boton">Agregar al carrito</button>
@@ -51,7 +51,7 @@
                     <p>Un nuevo viaje épico en un universo lleno de magia.</p>
                     <p class="precio">$899 MXN</p>
                    <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="3">
                         <input type="hidden" name="nombre" value="Final Fantasy XVI">
                         <input type="hidden" name="precio" value="899">
                         <button type="submit" class="boton">Agregar al carrito</button>
@@ -65,7 +65,7 @@
                     <p>Los clásicos regresan con combates más intensos.</p>
                     <p class="precio">$799 MXN</p>
                     <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="4">
                         <input type="hidden" name="nombre" value="Mortal Kombat 1">
                         <input type="hidden" name="precio" value="799">
                         <button type="submit" class="boton">Agregar al carrito</button>
@@ -79,7 +79,7 @@
                     <p>Acción y estrategia en una experiencia bélica moderna.</p>
                     <p class="precio">$999 MXN</p>
                     <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="5">
                         <input type="hidden" name="nombre" value="Call of Duty">
                         <input type="hidden" name="precio" value="999">
                         <button type="submit" class="boton">Agregar al carrito</button>
@@ -93,7 +93,7 @@
                     <p>Sobrevive al apocalipsis zombie junto a tus amigos.</p>
                     <p class="precio">$349 MXN</p>
                     <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="6">
                         <input type="hidden" name="nombre" value="Left 4 Dead 2">
                         <input type="hidden" name="precio" value="399">
                         <button type="submit" class="boton">Agregar al carrito</button>
@@ -106,7 +106,7 @@
                     <p>Misterio mediante monitos.</p>
                     <p class="precio">$249 MXN</p>
                        <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="7">
                         <input type="hidden" name="nombre" value="REPO">
                         <input type="hidden" name="precio" value="299">
                         <button type="submit" class="boton">Agregar al carrito</button>
@@ -120,7 +120,7 @@
                     <p>shooter tactico.</p>
                     <p class="precio">$549 MXN</p>
                       <form action="php\agregar_carrito.php" method="POST">
-                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id" value="8">
                         <input type="hidden" name="nombre" value="Rainbow six siege">
                         <input type="hidden" name="precio" value="599">
                         <button type="submit" class="boton">Agregar al carrito</button>
