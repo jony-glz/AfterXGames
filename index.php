@@ -128,7 +128,7 @@ if(isset($_SESSION['admin'])){
                     
                         <div class="boton-center">
                             <form action="php\agregar_carrito.php" method="POST">
-                                <input type="hidden" name="id" value="1">
+                                <input type="hidden" name="id" value="2">
                                 <input type="hidden" name="nombre" value="God Of War">
                                 <input type="hidden" name="precio" value="1249">
                                 <button type="submit" class="boton w-100">Agregar al carrito</button>
@@ -148,7 +148,7 @@ if(isset($_SESSION['admin'])){
 
                         <div class="boton-center">
                             <form action="php\agregar_carrito.php" method="POST">
-                                <input type="hidden" name="id" value="1">
+                                <input type="hidden" name="id" value="3">
                                 <input type="hidden" name="nombre" value="Ea2026">
                                 <input type="hidden" name="precio" value="1499">
                                 <button type="submit" class="boton w-100">Agregar al carrito</button>
