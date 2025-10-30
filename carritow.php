@@ -21,9 +21,7 @@ $carrito = isset($_SESSION['carrito']) ? $_SESSION['carrito'] : [];
 
 <body>
     <header><h1>Carrito de Compras</h1></header>
-    <a href="index.php" class="regreso">Inicio</a>
     
-
     <?php if (empty($carrito)): ?>
     <p>Tu carrito está vacío.</p>
     <?php else: ?>

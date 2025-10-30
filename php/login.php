@@ -17,6 +17,7 @@ if(isset($_POST['login'])){
         $row = mysqli_fetch_assoc($result);
 
         if($password == $row['contrasena']){
+            $_SESSION['id_usuario'] = $row['id'];
             if($row['rol'] == 'admin'){
                 $_SESSION['admin'] = $row['usuario'];
             } else {
