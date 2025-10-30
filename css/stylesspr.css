@@ -103,6 +103,15 @@ body {
 
 }
 
+.precio p{
+  font-size: 1.3rem;
+  color: #fbbf24;
+  background-color: #fbbf24;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+
 .hero {
   padding: 2rem;
 }

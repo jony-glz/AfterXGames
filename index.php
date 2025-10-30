@@ -63,13 +63,14 @@ if(isset($_SESSION['admin'])){
         <nav class="navegacion-principal">
             <a href="#">Inicio</a>
             <a href="#">Quiénes Somos</a>
-            <a href="afterxgames\catalogow.php">Catálogo</a>
+            <a href="catalogow.php">Catálogo</a>
             <a href="#">Contacto</a>
          <?php if(isset($_SESSION['admin'])): ?>
             <a href="inventario.php">Inventario</a>
         <?php elseif(isset($_SESSION['cliente'])): ?>
             <a href="carrito.php">Carrito</a>
         <?php else: ?>
+            <a href="carritow.php">Carrito</a>
             
 
     <?php endif; ?>
@@ -100,8 +101,17 @@ if(isset($_SESSION['admin'])){
                     <h3>Batman Arkam city</h3>
                     <p>Batman: Arkham, acción y aventura en Gotham City.</p>
 
+                         <p class="precio">$549 MXN</p>
+
+                  
+
                     <div class="boton-center">
-                        <input type="submit" class="boton w-100" value="Comprar" >
+                        <form action="php\agregar_carrito.php" method="POST">
+                                <input type="hidden" name="id" value="1">
+                                <input type="hidden" name="nombre" value="batman arkham night">
+                                <input type="hidden" name="precio" value="599">
+                                <button type="submit" class="boton w-100">Agregar al carrito</button>
+                            </form>
 
                     </div>
 
@@ -113,10 +123,16 @@ if(isset($_SESSION['admin'])){
                         <img src="img/kratos.jpg">
                         <h3>God Of War</h3>
                         <p>Aventura épica de Kratos contra dioses y monstruos.</p>
+                        <p class="precio">$1249 MXN</p>
                     
                     
                         <div class="boton-center">
-                            <input type="submit" class="boton w-100" value="Comprar">
+                            <form action="php\agregar_carrito.php" method="POST">
+                                <input type="hidden" name="id" value="1">
+                                <input type="hidden" name="nombre" value="God Of War">
+                                <input type="hidden" name="precio" value="1249">
+                                <button type="submit" class="boton w-100">Agregar al carrito</button>
+                            </form>
 
                         </div>
 
@@ -128,9 +144,15 @@ if(isset($_SESSION['admin'])){
                         <img src="img/fc26.jpeg">
                         <h3>EAsporst 26</h3>
                         <p>Futbol Competitivamente</p>
+                        <p class="precio">$1449 MXN</p>
 
                         <div class="boton-center">
-                            <input type="submit" class="boton w-100" value="Comprar">
+                            <form action="php\agregar_carrito.php" method="POST">
+                                <input type="hidden" name="id" value="1">
+                                <input type="hidden" name="nombre" value="Ea2026">
+                                <input type="hidden" name="precio" value="1499">
+                                <button type="submit" class="boton w-100">Agregar al carrito</button>
+                            </form>
 
                         </div>
 
