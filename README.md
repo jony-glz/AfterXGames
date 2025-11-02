@@ -14,4 +14,5 @@ tanto para el consumidor como para el administrador de este sistema. Dichas acti
 * Al hacer una compra, el inventario disminuye
 * Generar una factura PDF
 * Pagar con PayPal
+
 El administrador tiene acceso al CRUD (Create, Read, Update, Delete) de los productos del inventario.
