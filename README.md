@@ -1,6 +1,7 @@
 # Proyecto
 ## Personas encargadas
 Carlos Jonathan Montoya Gonzalez - 23130563.
+
 [Bryan Hernandez Saldivar](https://github.com/bryan171005) -23130590.
 
 ## Parte 1. Diseño y responsividad en Web
