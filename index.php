@@ -18,7 +18,7 @@
         rel="stylesheet">
     <link rel="icon" href="img/log.png" type="image/png">
 
-    <title>AfterXGames - Rama de bryan</title>
+    <title>AfterXGames</title>
 </head>
 
 
@@ -61,7 +61,7 @@ if(isset($_SESSION['admin'])){
 
     <div class="nv-bg">
         <nav class="navegacion-principal">
-            <a href="#">Inicio</a>
+            <a href="#index.php">Inicio</a>
             <a href="#">Quiénes Somos</a>
             <a href="catalogow.php">Catálogo</a>
             <a href="#">Contacto</a>
