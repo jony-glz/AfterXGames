@@ -21,10 +21,21 @@ foreach ($_SESSION['carrito'] as $id => $item) {
     <title>Confirmar Pago</title>
     <link rel="stylesheet" href="css/stylesspr.css">
     <link rel="stylesheet" href="css/carrito.css"> 
+    <style>
+        .linked-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header><h1>Confirmar Pago</h1></header>
-    <a href="carritow.php" class="regreso">Volver al Carrito</a>
+    <a href="carritow.php" class="linked-button">Volver al Carrito</a><br>
 
     <main class="contenedor sombra">
         <h2>Resumen del Pedido</h2>

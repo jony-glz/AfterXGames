@@ -103,7 +103,7 @@ body {
 
 }
 
-.precio p{
+.precio p {
   font-size: 1.3rem;
   color: #fbbf24;
   background-color: #fbbf24;
@@ -174,7 +174,7 @@ body {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-  
+
 
 }
 
@@ -305,20 +305,22 @@ body {
   text-align: center;
   border: none;
 }
- .images.boton-center {
+
+.images.boton-center {
   display: flex;
   align-items: center;
   justify-content: center;
 
 
-  
+
 }
+
 .usuario-box {
   margin-left: auto;
-  background-color:var(--bg);
+  background-color: var(--bg);
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  color:var(--text);
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -333,6 +335,7 @@ body {
 .usuario-box a:hover {
   text-decoration: underline;
 }
+
 .bienvenida-fixed {
   position: fixed;
   top: 15px;
@@ -347,11 +350,11 @@ body {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .bienvenida-fixed a {
-  color:var(--text);
+  color: var(--text);
   font-weight: bold;
   text-decoration: none;
 }
@@ -362,17 +365,15 @@ body {
 
 
 .navegacion-principal span {
-    display: inline-block;
-    color: var(--text);
-    background-color: #5B21B6;
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-left: 1rem;
+  display: inline-block;
+  color: var(--text);
+  background-color: #5B21B6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 1rem;
 }
-
-
 
 @media (min-width: 480px) {
   .boton {
@@ -429,9 +430,10 @@ body {
 @media (max-width: 600px) {
   .hero-ima img {
     /* Reducir aún más el tamaño inicial y la altura en móviles */
-    width: 2rem; 
-    height: 250px; 
+    width: 2rem;
+    height: 250px;
   }
+
   .hero-ima {
     width: 100%;
   }
@@ -455,12 +457,12 @@ body {
   }
 
   .hero-ima img {
-    height: 300px; 
+    height: 300px;
   }
 
   .hero-ima {
     height: 300px;
-    width: 95%; 
+    width: 95%;
   }
 }
 

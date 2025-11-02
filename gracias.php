@@ -9,6 +9,17 @@ $status = $_GET['status'] ?? 'error';
     <title>Estado de la Compra</title>
     <link rel="stylesheet" href="css/stylesspr.css">
     <link rel="stylesheet" href="css/carrito.css">
+    <style>
+        .linked-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <main class="contenedor sombra">
@@ -18,7 +29,7 @@ $status = $_GET['status'] ?? 'error';
             <?php if (isset($_SESSION['last_order_id'])): ?>
                 <p>Tu ID de pedido es: <?php echo htmlspecialchars($_SESSION['last_order_id']); ?></p>
                 
-                <a href="generar_factura.php?id=<?php echo htmlspecialchars($_SESSION['last_order_id']); ?>" class="boton" target="_blank">
+                <a href="factura.php?id=<?php echo htmlspecialchars($_SESSION['last_order_id']); ?>" class="boton" target="_blank">
                     Descargar Factura (PDF)
                 </a>
                 
@@ -39,7 +50,7 @@ $status = $_GET['status'] ?? 'error';
         <?php endif; ?>
         
         <br>
-        <a href="index.php" class="regreso">Volver al Inicio</a>
+        <a href="index.php" class="linked-button">Volver al Inicio</a>
     </main>
 </body>
 </html>

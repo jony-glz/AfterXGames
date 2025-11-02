@@ -6,6 +6,17 @@
     <title>Catálogo | AfterXGames</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/catalogo.css">
+    <style>
+        .linked-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,6 +25,7 @@
     </header>
 
     <main class="contenedor sombra">
+        <a href="index.php" class="linked-button">Volver al inicio</a> <br><br>
         <section class="juegos">
             <div class="images">
               
