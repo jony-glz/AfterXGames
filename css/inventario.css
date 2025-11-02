@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #0D0B1E;
+  --surface: #1A162B;
+  --primary: #6D28D9;
+  --secondary: #9333EA;
+  --accent: #E11D48;
+  --highlight: #38BDF8;
+  --text: #E5E7EB;
+  --muted: #9CA3AF;
+}
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  background-image: linear-gradient(to top, var(--primary) 0%, var(--bg) 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: var(--surface);
+  color: var(--highlight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 10px rgba(109, 40, 217, 0.5);
+  border-bottom: 2px solid var(--primary);
+}
+
+.encabezado h1 {
+  font-size: 2.4rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.boton-agregar {
+  background-color: var(--secondary);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-agregar:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Tabla de inventario */
+.tabla-inventario {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface);
+  border-radius: 1rem;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.tabla-inventario th {
+  background-color: var(--primary);
+  color: var(--text);
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tabla-inventario td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabla-inventario tr:hover {
+  background-color: rgba(147, 51, 234, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+/* Botones de acción */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn.editar {
+  background-color: var(--highlight);
+  color: #000;
+}
+
+.btn.editar:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+.btn.eliminar {
+  background-color: var(--accent);
+}
+
+.btn.eliminar:hover {
+  background-color: #be123c;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabla-inventario {
+    font-size: 1.2rem;
+  }
+
+  .boton-agregar {
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+  }
+}
+
+.juegon{
+    display: flex;
+    align-items: end;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.formulario{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}

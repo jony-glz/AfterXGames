@@ -66,9 +66,9 @@ if(isset($_SESSION['admin'])){
             <a href="catalogow.php">Catálogo</a>
             <a href="#">Contacto</a>
          <?php if(isset($_SESSION['admin'])): ?>
-            <a href="inventario.php">Inventario</a>
+            <a href="inventariow.php">Inventario</a>
         <?php elseif(isset($_SESSION['cliente'])): ?>
-            <a href="carrito.php">Carrito</a>
+            <a href="carritow.php">Carrito</a>
         <?php else: ?>
             <a href="carritow.php">Carrito</a>
             
