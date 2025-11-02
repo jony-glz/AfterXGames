@@ -24,7 +24,7 @@ if(isset($_POST['registrar'])){
         $sql = "INSERT INTO usuarios (usuario, contrasena, nombre, correo, telefono, rol) 
                 VALUES ('$usuario', '$password', '$nombre', '$correo', '$telefono', 'cliente')";
         if(mysqli_query($conexion, $sql)){
-           echo $mensaje = "Registro exitoso, ya puedes <a href='login.php'>iniciar sesión</a>";
+           echo $mensaje = "Registro exitoso, ya puedes <a href='../loginw.php'>iniciar sesión</a>";
         } else {
            echo $mensaje = "Error al registrar usuario";
         }
