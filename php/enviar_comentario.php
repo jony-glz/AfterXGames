@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     Nombre: $nombre
     Teléfono: $telefono
-    Correo: $correo
+    Correo: "bryan171005@gmail.com";
 
     Comentario:
     $comentario
