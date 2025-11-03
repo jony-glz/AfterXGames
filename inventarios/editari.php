@@ -11,23 +11,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $precio = $_POST['precio'];
     $stock = $_POST['stock'];
 
-    $conexion->query("UPDATE productos SET nombre='$nombre', descripcion='$descripcion', precio='$precio', stock='$stock' WHERE id=$id");
-    header("Location: inventario.php");
+    
+    if (!empty($_FILES['imagen']['name'])) {
+        $nombreImagen = basename($_FILES['imagen']['name']);
+        $rutaDestino = "../img/" . $nombreImagen;
+        move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaDestino);
+    } else {
+        $nombreImagen = $producto['imagen']; 
+    }
+
+    $conexion->query("UPDATE productos 
+                      SET nombre='$nombre', descripcion='$descripcion', precio='$precio', stock='$stock', imagen='$nombreImagen' 
+                      WHERE id=$id");
+
+    header("Location: ..\inventariow.php");
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Editar juego | AfterXGames</title>
     <link rel="stylesheet" href="../css/inventario.css">
+    <style>
+        .linked-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 <main class="contenedor sombra">
     <h2>Editar juego</h2>
-    <form method="POST">
+
+    <form method="POST" enctype="multipart/form-data" class="formulario">
+
         <label>Nombre</label>
         <input type="text" name="nombre" value="<?= $producto['nombre'] ?>" required>
 
@@ -40,8 +64,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label>Stock</label>
         <input type="number" name="stock" value="<?= $producto['stock'] ?>" required>
 
-        <button type="submit" class="btn-guardar">Guardar cambios</button>
-        <a href="inventario.php" class="btn-cancelar">Cancelar</a>
+        <label>Imagen (opcional)</label>
+        <input type="file" name="imagen" accept="image/*">
+
+        <?php if (!empty($producto['imagen'])): ?>
+            <p>Imagen actual:</p>
+            <img src="../img/<?= $producto['imagen'] ?>" alt="Imagen del producto" width="120">
+        <?php endif; ?>
+
+        <button type="submit" class="linked-button">Guardar cambios</button>
+        <a href="..\inventariow.php" class="linked-button">Cancelar</a>
     </form>
 </main>
 </body>

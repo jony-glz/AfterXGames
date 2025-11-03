@@ -11,16 +11,29 @@ $resultado = $conexion->query("SELECT * FROM productos");
     <title>Inventario | AfterXGames</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/inventario.css">
+     <style>
+        .linked-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
 <header class="titulo">
     <h1>Gestión de Inventario</h1>
+     <a href="index.php" class="linked-button">Inicio</a>
 </header>
 
 <main class="contenedor sombra">
     <div class="juegon">
-        <a href="inventarios\registroi.php" class="btn-agregar">+ Agregar nuevo juego</a>
+        <a href="inventarios\registroi.php" class="linked-button">+ Agregar nuevo juego</a>
+        
 
     </div>
     

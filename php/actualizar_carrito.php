@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'conexion.php'; // Necesitamos la conexión para verificar el stock
+require 'conexion.php'
 
 // Verificamos que se envió un formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
