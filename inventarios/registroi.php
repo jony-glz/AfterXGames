@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Agregar nuevo juego</h2>
     <a href="..\index.php" class="linked-button">Inicio</a>
 
-        <form method="POST" class="formulario" >
+        <form method="POST" class="formulario" enctype="multipart/form-data">
         <label>Nombre</label>
         <input type="text" name="nombre" required>
 

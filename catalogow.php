@@ -24,6 +24,19 @@ $resultado = $conexion->query($sql);
             text-decoration: none;
             border-radius: 5px;
         }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 0.5rem;
+
+            /* Aquí pegué tus estilos del otro selector */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
     </style>
 </head>
 <body>
