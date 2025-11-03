@@ -32,7 +32,6 @@ $resultado = $conexion->query($sql);
             object-position: top;
             border-radius: 0.5rem;
 
-            /* Aquí pegué tus estilos del otro selector */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             border: 3px solid transparent;
