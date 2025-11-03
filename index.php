@@ -169,7 +169,7 @@ if(isset($_SESSION['admin'])){
         <h1>Comentarios</h1>
 
 
-        <form class="ff">
+        <form class="ff" action="php\enviar_comentario.php" method="POST">
             <fieldset>
                 <legend>Deja tus Comentarios</legend>
                 <div class="campos">
