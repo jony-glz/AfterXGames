@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO productos (nombre, descripcion, precio, stock, imagen)
                 VALUES ('$nombre', '$descripcion', '$precio', '$stock', '$imagen')";
         $conexion->query($sql);
-        header("Location: inventario.php");
+        header("Location: ..\inventariow.php");
         exit;
     } else {
         echo "<script>alert('Error al subir la imagen.');</script>";
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="file" name="imagen" accept="image/*" required><br>
 
         <button type="submit" class="linked-button">Guardar</button>
-        <a href="inventario.php" class="linked-button alinear ">Cancelar</a>
+        <a href="..\inventariow.php" class="linked-button alinear ">Cancelar</a>
     </form>
 
 
