@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="linked-button">Guardar cambios</button>
         <a href="..\inventariow.php" class="linked-button">Cancelar</a>
     </form>
-    <script src="../js/editar_juego.js"></script>
+    <script src="../js/validar_juego.js"></script>
 </main>
 </body>
 </html>
