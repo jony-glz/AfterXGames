@@ -34,11 +34,14 @@ $resultado = $conexion->query("SELECT * FROM productos");
     <div class="juegon">
         <a href="inventarios\registroi.php" class="linked-button">+ Agregar nuevo juego</a>
         
-
+        <div class="buscador-container">
+            <label for="buscador">Buscar Juego:</label>
+            <input type="text" id="buscador" placeholder="Escribe el nombre o la descripción..." class="input-text" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
     </div>
     
     <br>
-    <table class="tabla-inventario">
+    <table class="tabla-inventario" id="tablaProductos">
         <thead>
             <tr>
                 <th>ID</th>
@@ -65,6 +68,7 @@ $resultado = $conexion->query("SELECT * FROM productos");
             <?php endwhile; ?>
         </tbody>
     </table>
+    <script src="js/buscador.js"></script>
 </main>
 
 </body>

@@ -215,7 +215,7 @@ if(isset($_SESSION['admin'])){
 
 
     </section>
-    <script src="js/validar_comentario.js"></script>
+    <script src="js/comentario.js"></script>
 
     <script src="js/carrusel.js"></script>
 

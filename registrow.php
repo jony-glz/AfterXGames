@@ -16,7 +16,7 @@
             <p style="color:red; text-align:center;"><?php echo $mensaje; ?></p>
         <?php } ?>
 
-        <form action="php\registro.php" method="POST" class="ff">
+        <form action="php\registro.php" method="POST" class="ff" id="formRegistro">
             <fieldset>
                 <legend>Crea tu cuenta</legend>
 
@@ -50,7 +50,7 @@
                 </div>
             </fieldset>
         </form>
-
+        <script src="js/validar_registro.js"></script>
         <p style="text-align:center;">¿Ya tienes cuenta? <a href="loginw.php">Inicia sesión</a></p>
     </main>
 </body>

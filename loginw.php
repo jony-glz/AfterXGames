@@ -33,6 +33,7 @@
                 </div>
             </fieldset>
         </form>
+        <script src="js/validar_login.js"></script>
 
         <p style="text-align:center;">¿No tienes cuenta? <a href="registrow.php">Regístrate</a></p>
     </main>

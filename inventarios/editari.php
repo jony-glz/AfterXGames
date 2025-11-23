@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main class="contenedor sombra">
     <h2>Editar juego</h2>
 
-    <form method="POST" enctype="multipart/form-data" class="formulario">
+    <form method="POST" enctype="multipart/form-data" class="formulario" id="editarJuego">
 
         <label>Nombre</label>
         <input type="text" name="nombre" value="<?= $producto['nombre'] ?>" required>
@@ -75,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="linked-button">Guardar cambios</button>
         <a href="..\inventariow.php" class="linked-button">Cancelar</a>
     </form>
+    <script src="../js/editar_juego.js"></script>
 </main>
 </body>
 </html>

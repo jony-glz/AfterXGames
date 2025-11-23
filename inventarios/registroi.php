@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Agregar nuevo juego</h2>
     <a href="..\index.php" class="linked-button">Inicio</a>
 
-        <form method="POST" class="formulario" enctype="multipart/form-data">
+        <form method="POST" class="formulario" enctype="multipart/form-data" id="editarJuego">
         <label>Nombre</label>
         <input type="text" name="nombre" required>
 
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="linked-button">Guardar</button>
         <a href="..\inventariow.php" class="linked-button alinear ">Cancelar</a>
     </form>
-
+    <script src="../js/validar_juego.js"></script>
 
     
 </main>
