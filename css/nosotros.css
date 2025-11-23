@@ -1,0 +1,124 @@
+:root {
+    --bg: #0D0B1E;
+    --surface: #1A162B;
+    --primary: #6D28D9;
+    --secondary: #9333EA;
+    --accent: #E11D48;
+    --highlight: #38BDF8;
+    --text: #E5E7EB;
+    --muted: #9CA3AF;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: var(--highlight);
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 4rem auto;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform .4s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    max-width: 450px;   
+    margin: 0 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1.5rem rgba(109, 40, 217, 0.4);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: var(--secondary);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Descripción */
+.descripcion {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--muted);
+}
+
+/* Misión y Visión */
+.mv-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mv-card {
+    background: var(--surface);
+    padding: 2.5rem;
+    border-radius: 1.8rem;
+    width: 4rem;
+    min-width: 280px;
+    box-shadow: 0 0 12px rgba(109, 40, 217, 0.25);
+    transition: 0.3s;
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px rgba(147, 51, 234, 0.4);
+}
+
+.mv-card h3 {
+    color: var(--highlight);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.mv-card p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.linked-button{
+    display: inline-block;
+     padding: 1rem 2rem; 
+     font-size: 16px;
+      background-color:#38BDF8 ; 
+      color: white; text-align: 
+      center; text-decoration: none; 
+      border-radius: 25px; transition: background-color 0.3s, transform 0.3s; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-top: 2rem;
+}
