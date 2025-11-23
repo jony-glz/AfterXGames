@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `if0_40317778_afterx`
 --
+CREATE DATABASE afterx;
+USE afterx;
 
 -- --------------------------------------------------------
 
