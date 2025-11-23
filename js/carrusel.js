@@ -1,18 +1,30 @@
 $(document).ready(function() {
     
+    // Selectores globales
     const $carousel = $(".carousel");
-    const $nextBtn = $(".next"); // Simulacion de clic
-    const $sliderContainer = $(".slider-container"); // Contenedor para la pausa
-
-    // Variables de control
-    const SLIDE_WIDTH = 900; 
-    const slideCount = $carousel.children().length;
-    const maxOffset = -((slideCount - 1) * SLIDE_WIDTH);
-    const INTERVAL_TIME = 3000; // ⭐ Tiempo de espera: 3 segundos
+    const $prevBtn = $(".prev");
+    const $nextBtn = $(".next");
+    const $sliderContainer = $(".slider-container");
     
+    // Variables de control globales 
+    let SLIDE_WIDTH;
+    let slideCount;
+    let maxOffset;
     let offset = 0; 
-    let autoMoveInterval; 
-
+    let autoMoveInterval;
+    
+    const INTERVAL_TIME = 3000; // 3 segundos para el auto-movimiento
+ 
+    function initializeCarousel() {
+        // Recalcular el tamaño REAL basado en CSS (900px o 90vw)
+        SLIDE_WIDTH = $sliderContainer.width(); 
+        slideCount = $carousel.children().length;
+        maxOffset = -((slideCount - 1) * SLIDE_WIDTH);
+        
+        //  Asegurarse de que el carrusel inicie correctamente en la posición 0
+        offset = 0;
+        $carousel.css('left', '0px');
+    }
     
     // Función para manejar el movimiento con animación
     function moveCarousel() {
@@ -21,7 +33,7 @@ $(document).ready(function() {
         }, 400); 
     }
 
-    // Función que simula el clic en "Siguiente"
+    // Función que avanza al siguiente slide
     function nextSlide() {
         if (offset <= maxOffset) {
             offset = 0; 
@@ -31,47 +43,50 @@ $(document).ready(function() {
         moveCarousel();
     }
     
+    // Funciones de control de auto-movimiento
     function startAutoMove() {
-        // Establece un temporizador que llama a nextSlide() cada INTERVAL_TIME
+        stopAutoMove(); // Siempre limpiamos antes de iniciar
         autoMoveInterval = setInterval(nextSlide, INTERVAL_TIME);
     }
     
-    // Detiene el movimiento
     function stopAutoMove() {
         clearInterval(autoMoveInterval);
     }
     
-    // Lógica de navegación manual 
-    $(".next").on("click", function() {
+    // --- Manejadores de Eventos Manuales ---
+    $nextBtn.on("click", function() {
         nextSlide();
-        // Cuando hay interacción manual, reiniciamos el temporizador
-        stopAutoMove();
-        startAutoMove();
+        startAutoMove(); // Reinicia el temporizador
     });
 
-    $(".prev").on("click", function() {
+    $prevBtn.on("click", function() {
         if (offset >= 0) {
             offset = maxOffset; 
         } else {
             offset += SLIDE_WIDTH;
         }
         moveCarousel();
-        // Cuando hay interacción manual, reiniciamos el temporizador
-        stopAutoMove();
-        startAutoMove();
+        startAutoMove(); // Reinicia el temporizador
     });
 
-    // Pausar al poner el raton
-    $sliderContainer.hover(
-        // Mouse entra (mouseenter): Detener el movimiento
-        function() {
-            stopAutoMove();
-        }, 
-        // Mouse sale (mouseleave): Reanudar el movimiento
-        function() {
-            startAutoMove();
-        }
-    );
+    // Pausa al pasar el ratón (Hover)
+    $sliderContainer.hover(stopAutoMove, startAutoMove);
     
-    startAutoMove();
+    // Recalcular en redimensionamiento y al iniciar
+    $(window).on('resize', function() {
+        // Detiene el movimiento durante el cambio de tamaño
+        stopAutoMove(); 
+        
+        // Recalcula después de un breve retraso
+        setTimeout(function() {
+            initializeCarousel();
+            startAutoMove();
+        }, 50); // 50ms debería ser suficiente para que el navegador se asiente
+    }).trigger('resize'); //  Forzamos el evento 'resize' al inicio
+
+    // Inicialización con Retraso
+    setTimeout(function() {
+        initializeCarousel();
+        startAutoMove(); 
+    }, 100); 
 });
