@@ -216,7 +216,7 @@ if(isset($_SESSION['admin'])){
 
     </section>
     <script src="js/comentario.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/carrusel.js"></script>
 
     <footer class="footer">

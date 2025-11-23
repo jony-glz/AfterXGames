@@ -515,8 +515,9 @@ body {
     display: flex; 
     height: 400px; 
     width: fit-content; 
-    transition: transform 0.4s ease-in-out; 
+    position: relative; 
     margin: 0; 
+    left: 0; 
 }
 
 
