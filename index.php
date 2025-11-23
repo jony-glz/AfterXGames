@@ -62,9 +62,9 @@ if(isset($_SESSION['admin'])){
     <div class="nv-bg">
         <nav class="navegacion-principal">
             <a href="#index.php">Inicio</a>
-            <a href="#">Quiénes Somos</a>
+            <a href="nosotros.html">Quiénes Somos</a>
             <a href="catalogow.php">Catálogo</a>
-            <a href="#">Contacto</a>
+            <a href="contacto.html">Contacto</a>
          <?php if(isset($_SESSION['admin'])): ?>
             <a href="inventariow.php">Inventario</a>
         <?php elseif(isset($_SESSION['cliente'])): ?>
@@ -77,10 +77,11 @@ if(isset($_SESSION['admin'])){
 
         </nav>
     </div>
-    <section class="hero">
-        <h2>Categorias</h2>
-
-        <section class="hero-ima">
+    <section class="hero slider-principal"> 
+    <h2>Categorias</h2>
+    
+    <div class="slider-container">
+        <section class="hero-ima carousel"> 
             <img src="img/Hk.jpg">
             <img src="img/SH4jpg.jpg">
             <img src="img/finalf.jpg">
@@ -88,7 +89,12 @@ if(isset($_SESSION['admin'])){
             <img src="img/codjpg.jpg">
             <img src="img/left.jpg">
         </section>
-    </section>
+    </div>
+
+    <button class="prev">&lt;</button> 
+    <button class="next">&gt;</button>
+
+</section>
 
     <main class=" contenedor sombra">
         <h2>Juegos destacados</h2>
@@ -169,28 +175,28 @@ if(isset($_SESSION['admin'])){
         <h1>Comentarios</h1>
 
 
-        <form class="ff" action="php\enviar_comentario.php" method="POST">
+        <form class="ff" id="formComentario">
             <fieldset>
                 <legend>Deja tus Comentarios</legend>
                 <div class="campos">
                     <div class="campo">
                         <label>Nombre</label>
-                        <input class="input-text" type="text" placeholder="Tu nombre">
+                        <input class="input-text" type="text" placeholder="Tu nombre" name="nombre">
 
                     </div>
                     <div class="campo">
                         <label>Telefono</label>
-                        <input class="input-text" type="text" placeholder="Tu numero">
+                        <input class="input-text" type="text" placeholder="Tu numero" name="telefono">
 
                     </div>
                     <div class="campo">
                         <label>Correo</label>
-                        <input class="input-text" type="email" placeholder="Tu correo">
+                        <input class="input-text" type="email" placeholder="Tu correo" name="correo">
 
                     </div>
                     <div class="campo">
                         <label>Comentarios</label>
-                        <textarea class="input-text"></textarea>
+                        <textarea class="input-text" name="comentario"></textarea>
 
 
 
@@ -209,11 +215,10 @@ if(isset($_SESSION['admin'])){
 
 
     </section>
-
     <script src="js/validar_comentario.js"></script>
 
     <script src="js/carrusel.js"></script>
-    
+
     <footer class="footer">
 
         <p>&copy; 2025 AfterXGames - Todos los derechos reservados</p>
