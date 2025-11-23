@@ -17,3 +17,14 @@ tanto para el consumidor como para el administrador de este sistema. Dichas acti
 * Pagar con PayPal
 
 El administrador tiene acceso al CRUD (Create, Read, Update, Delete) de los productos del inventario.
+## Parte 3. Validaciones y extras con JavaScript
+Para la tercera unidad de programación web, y usando el mismo proyecto que se ha estado usando, se implementa código de JavaScript
+para realizar las siguientes tareas:
+* Validaciones en formularios
+* Flyer o carrusel de imágenes
+* Un elemento extra (en este caso se optó por usar una barra de búsqueda dentro de la tabla de inventarios)
+
+Se consigue realizar lo siguiente mediante teoría y herramientas vistas en clase, tales como:
+* Expresiones regulares
+* DOM
+* Librerías como JQuery
